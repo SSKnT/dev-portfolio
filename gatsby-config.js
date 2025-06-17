@@ -6,7 +6,7 @@ module.exports = {
     description:
       'Sohaib Shaukat is a full-stack developer who enjoys building slick websites, clever tools, and the occasional side project that spirals into something bigger.',
     siteUrl: 'https://sohaibshaukat.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/og1.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
   plugins: [
