@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Django'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,33 +135,26 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hey, I’m Sohaib — a developer who got into coding back in 2020 after discovering how
+              much fun it was to mess around with websites using browser dev tools. Changing a
+              heading's color or swapping out images felt like magic at the time—and that curiosity
+              quickly turned into a real passion for building.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              Since then, I’ve worked on a variety of projects across different roles. I interned at{' '}
+              <a href="https://prodigyinfotech.dev/">Prodigy InfoTech</a>, picked up freelance gigs
+              on <a href="https://fiverr.com/">Fiverr</a>, and now run my own studio called{' '}
+              <a href="https://synplex.dev">Synplex</a>, where I build digital products that are
+              both useful and easy to use.
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              Synplex started as a side hustle but has grown into a space where I experiment, learn,
+              and ship real products—from simple tools to full-blown platforms.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Some technologies I’ve been working with lately include:</p>
           </div>
 
           <ul className="skills-list">
@@ -173,7 +166,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/me.jpeg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
