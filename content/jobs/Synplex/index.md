@@ -4,7 +4,7 @@ title: 'Founder & Full-Stack Developer'
 company: 'Synplex'
 location: 'Remote'
 range: 'Jan 2025 – Present'
-url: 'https://synplex.dev/'
+url: 'https://synplex.tech/'
 ---
 
 - Founded Synplex, a full-stack development studio focused on creating scalable web apps, SaaS platforms, and developer tools.
