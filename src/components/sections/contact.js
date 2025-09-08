@@ -60,7 +60,7 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        I'm currently open to new opportunities and freelance projects! Feel free to reach out—I'll
+        I'm currently open to new opportunities and freelance projects! Feel free to reach out. I'll
         get back to you as soon as I can.
       </p>
 

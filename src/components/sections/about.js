@@ -135,7 +135,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hey, I’m Sohaib — a developer who got into coding back in 2020 after discovering how
+              Hey, I’m Sohaib, a developer who got into coding back in 2020 after discovering how
               much fun it was to mess around with websites using browser dev tools. Changing a
               heading's color or swapping out images felt like magic at the time—and that curiosity
               quickly turned into a real passion for building.

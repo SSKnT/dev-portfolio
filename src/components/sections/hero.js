@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I build things for the internet—sometimes sleek UIs, sometimes problem-solving backends.
+        I build things for the internet, sometimes sleek UIs, sometimes problem-solving backends.
         These days, I’m building practical, user-focused products at{' '}
         <a href="https://synplex.tech/" target="_blank" rel="noreferrer">
           Synplex
