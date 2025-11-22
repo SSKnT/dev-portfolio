@@ -1,7 +1,7 @@
 ---
 date: '2024-08-01'
 title: 'Freelance Web Developer'
-company: 'Attrakt Media'
+company: 'Attrakt'
 location: 'Remote'
 range: 'August 2025 – Present'
 url: 'https://attraktmedia.com'
