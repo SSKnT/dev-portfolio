@@ -2,7 +2,7 @@
 date: '2025-01-01'
 title: 'Synplex'
 cover: './s2.png'
-github: 'https://github.com/SSKnT/synplex'
+github: ''
 external: 'https://synplex.tech'
 tech:
   - Next.js

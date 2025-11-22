@@ -7,10 +7,9 @@ range: 'Jan 2025 – Present'
 url: 'https://synplex.tech/'
 ---
 
-- Founded Synplex, a full-stack development studio focused on creating scalable web apps, SaaS platforms, and developer tools.
-- Designed and launched the official Synplex site using Next.js and Vercel, with a focus on clean UI and fast performance.
-- Led the architecture and development of Utilify — a SaaS platform offering APIs for text analysis, image editing, and file conversion.
-- Engineered both frontend (React + Tailwind CSS) and backend (Django REST Framework + PostgreSQL), including user auth and dashboard UX.
-- Built internal tooling for performance monitoring, billing logic, and deployment automation.
-- Managed the full product lifecycle: concept, development, deployment, and maintenance.
-- Actively exploring ways to grow Synplex into a hub for developer productivity and problem-solving microservices.
+- Founded Synplex, a studio for scalable web apps and SaaS platforms.
+- Led development of Utilify, a SaaS platform with APIs for text analysis and image editing.
+- Engineered full-stack solutions with React, Tailwind CSS, Django, and PostgreSQL.
+- Designed and launched the Synplex site with a focus on performance and clean UI.
+- Built internal tools for deployment automation and performance monitoring.
+- Managed the full product lifecycle, from concept to maintenance.

@@ -137,7 +137,7 @@ const About = () => {
             <p>
               Hey, I’m Sohaib, a developer who got into coding back in 2020 after discovering how
               much fun it was to mess around with websites using browser dev tools. Changing a
-              heading's color or swapping out images felt like magic at the time—and that curiosity
+              heading's color or swapping out images felt like magic at the time, and that curiosity
               quickly turned into a real passion for building.
             </p>
 
@@ -151,7 +151,7 @@ const About = () => {
 
             <p>
               Synplex started as a side hustle but has grown into a space where I experiment, learn,
-              and ship real products—from simple tools to full-blown platforms.
+              and ship real products, from simple tools to full-blown platforms.
             </p>
 
             <p>Some technologies I’ve been working with lately include:</p>

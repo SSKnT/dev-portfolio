@@ -41,7 +41,7 @@ const StyledTabList = styled.div`
     margin-bottom: 30px;
   }
   @media (max-width: 480px) {
-    width: calc(100% + 50px);
+    width: calc(100% + 25px);
     padding-left: 25px;
     margin-left: -25px;
   }

@@ -2,8 +2,8 @@
 date: '2024-06-01'
 title: 'RoottMedia'
 cover: './s.png'
-github: 'https://github.com/SSKnT/root-media'
-external: ''
+github: ''
+external: 'https://roottmedia.com/'
 tech:
   - React
   - Next.js

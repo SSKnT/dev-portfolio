@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
@@ -303,7 +303,142 @@ const StyledProject = styled.li`
   }
 `;
 
+const StyledModal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: ${props => (props.isOpen ? 'flex' : 'none')};
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: var(--navy);
+    border-radius: var(--border-radius);
+    overflow: auto;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--green);
+    color: var(--navy);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-info {
+    padding: 20px;
+  }
+
+  .modal-title {
+    color: var(--lightest-slate);
+    margin: 0 0 15px;
+    font-size: var(--fz-xl);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--green);
+      }
+    }
+  }
+
+  .modal-description {
+    color: var(--light-slate);
+    font-size: var(--fz-md);
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 10px 5px 0;
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: var(--fz-xs);
+    }
+  }
+
+  .modal-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      ${({ theme }) => theme.mixins.flexCenter};
+      padding: 8px;
+      color: var(--lightest-slate);
+
+      &.external {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .cta {
+      ${({ theme }) => theme.mixins.smallButton};
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+`;
+
 const Featured = () => {
+  const [modalData, setModalData] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project, image) => {
+    setModalData({ project, image });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalData(null);
+  };
+
   const data = useStaticQuery(graphql`
     {
       featured: allMarkdownRemark(
@@ -364,14 +499,50 @@ const Featured = () => {
                   <div>
                     <p className="project-overline">Featured Project</p>
 
-                    <h3 className="project-title">
-                      <a href={external}>{title}</a>
-                    </h3>
+                    <button
+                      className="project-title"
+                      style={{
+                        cursor: 'pointer',
+                        background: 'none',
+                        border: 'none',
+                        padding: 0,
+                        font: 'inherit',
+                        color: 'inherit',
+                        textAlign: 'inherit',
+                        width: '100%',
+                      }}
+                      onClick={() => {
+                        if (window.innerWidth <= 768) {
+                          openModal({ frontmatter, html }, image);
+                        } else {
+                          window.open(external, '_blank');
+                        }
+                      }}>
+                      <h3 style={{ margin: 0 }}>{title}</h3>
+                    </button>
 
-                    <div
-                      className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                    <button
+                      className="project-description-button"
+                      style={{
+                        cursor: 'pointer',
+                        background: 'none',
+                        border: 'none',
+                        padding: 0,
+                        font: 'inherit',
+                        color: 'inherit',
+                        textAlign: 'inherit',
+                        width: '100%',
+                      }}
+                      onClick={() => {
+                        if (window.innerWidth <= 768) {
+                          openModal({ frontmatter, html }, image);
+                        }
+                      }}>
+                      <div
+                        className="project-description"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                      />
+                    </button>
 
                     {tech.length && (
                       <ul className="project-tech-list">
@@ -410,6 +581,73 @@ const Featured = () => {
             );
           })}
       </StyledProjectsGrid>
+
+      <StyledModal isOpen={isModalOpen} onClick={closeModal}>
+        {modalData && (
+          <div className="modal-content">
+            <button className="modal-close" onClick={closeModal} aria-label="Close modal">
+              ×
+            </button>
+            <GatsbyImage
+              image={modalData.image}
+              alt={modalData.project.frontmatter.title}
+              className="modal-image"
+            />
+            <div className="modal-info">
+              <h3 className="modal-title">
+                <a
+                  href={modalData.project.frontmatter.external}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {modalData.project.frontmatter.title}
+                </a>
+              </h3>
+              <div
+                className="modal-description"
+                dangerouslySetInnerHTML={{ __html: modalData.project.html }}
+              />
+              {modalData.project.frontmatter.tech && (
+                <ul className="modal-tech">
+                  {modalData.project.frontmatter.tech.map((tech, i) => (
+                    <li key={i}>{tech}</li>
+                  ))}
+                </ul>
+              )}
+              <div className="modal-links">
+                {modalData.project.frontmatter.cta && (
+                  <a
+                    href={modalData.project.frontmatter.cta}
+                    aria-label="Learn More"
+                    className="cta"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Learn More
+                  </a>
+                )}
+                {modalData.project.frontmatter.github && (
+                  <a
+                    href={modalData.project.frontmatter.github}
+                    aria-label="GitHub Link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Icon name="GitHub" />
+                  </a>
+                )}
+                {modalData.project.frontmatter.external && !modalData.project.frontmatter.cta && (
+                  <a
+                    href={modalData.project.frontmatter.external}
+                    aria-label="External Link"
+                    className="external"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Icon name="External" />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </StyledModal>
     </section>
   );
 };

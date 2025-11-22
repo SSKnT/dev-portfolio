@@ -1,14 +1,14 @@
 ---
 date: '2024-08-01'
 title: 'Freelance Web Developer'
-company: 'Fiverr'
+company: 'Attrakt Media'
 location: 'Remote'
-range: 'August 2023 – January 2024'
-url: 'https://www.fiverr.com/'
+range: 'August 2025 – Present'
+url: 'https://attraktmedia.com'
 ---
 
-- Completed a variety of freelance web development projects, including portfolio sites, dashboards, and REST APIs for clients worldwide.
-- Delivered pixel-perfect responsive designs and full-stack applications tailored to client needs, often under tight deadlines.
-- Communicated directly with clients to gather requirements, propose solutions, and iterate based on feedback.
-- Worked with modern stacks including React, Next.js, Tailwind CSS, and Django to deliver scalable, maintainable products.
-- Built reusable UI components and integrated third-party APIs such as Firebase, Stripe, and OpenAI for custom features.
+- Provide ongoing web development services on a retainer basis.
+- Enhanced and maintained the client’s website, ensuring optimal performance and reliability.
+- Integrated third-party plugins and optimized assets for seamless functionality.
+- Gained experience with cloud hosting and deployment using Cloudflare.
+- Collaborate closely with the client to ensure project goals are met efficiently.
