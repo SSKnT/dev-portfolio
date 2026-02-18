@@ -1,5 +1,5 @@
 ---
-date: '2026-02-17'
+date: '2025-01-14'
 title: 'Manify'
 cover: './manify.png'
 github: 'https://github.com/SSKnT/freelancer-client-manager'
