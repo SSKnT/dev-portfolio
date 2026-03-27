@@ -3,7 +3,7 @@ date: '2025-01-14'
 title: 'Manify'
 cover: './manify.png'
 github: 'https://github.com/SSKnT/freelancer-client-manager'
-cta: 'https://manify.synplex.studio'
+external: 'https://manify.synplex.studio'
 tech:
   - Next.js
   - Django
