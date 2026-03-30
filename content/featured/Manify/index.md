@@ -7,11 +7,8 @@ external: 'https://manify.synplex.studio'
 tech:
   - Next.js
   - Django
-  - PostgreSQL
-  - Tailwind CSS
   - OAuth 2.0
-  - JWT
   - Docker
 ---
 
-A multi-tenant SaaS application designed for freelancers to manage clients and projects efficiently. Manify allows users to add clients, create projects under each client, track due dates, manage invoices and payments, and monitor overall workflow in one centralized dashboard.
+A multi-tenant SaaS application for freelancers to manage clients, projects, invoices, and payments in one centralized dashboard.
