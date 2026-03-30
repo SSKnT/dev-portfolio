@@ -1,6 +1,6 @@
 ---
 date: '2024-09-01'
-title: 'React Weather'
+title: 'We-Check'
 github: 'https://github.com/SSKnT/React-weather'
 external: ''
 tech:
