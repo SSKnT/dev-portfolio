@@ -1,8 +1,8 @@
 ---
 date: '2025-01-14'
 title: 'Manify'
-cover: './manify.png'
-github: 'https://github.com/SSKnT/freelancer-client-manager'
+cover: './manify.jpg'
+github: 'https://github.com/SSKnT/manify-frontend'
 external: 'https://manify.synplex.studio'
 tech:
   - Next.js
@@ -11,4 +11,4 @@ tech:
   - Docker
 ---
 
-A multi-tenant SaaS application for freelancers to manage clients, projects, invoices, and payments in one centralized dashboard.
+A SaaS application for freelancers to manage clients, projects, invoices, and payments in one centralized dashboard.

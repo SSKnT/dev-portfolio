@@ -40,9 +40,31 @@ const StyledHeroSection = styled.section`
     max-width: 540px;
   }
 
-  .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
+  .cta-group {
+    display: flex;
+    gap: 16px;
     margin-top: 50px;
+
+    @media (max-width: 480px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .primary-link {
+    ${({ theme }) => theme.mixins.primaryButton};
+  }
+
+  .secondary-link {
+    ${({ theme }) => theme.mixins.bigButton};
+  }
+
+  .primary-link,
+  .secondary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -67,7 +89,7 @@ const Hero = () => {
       <p>
         I build things for the internet, sometimes sleek UIs, sometimes problem-solving backends.
         These days, I’m building practical, user-focused products at{' '}
-        <a href="https://synplex.tech/" target="_blank" rel="noreferrer">
+        <a href="https://synplex.studio/" target="_blank" rel="noreferrer">
           Synplex
         </a>
         .
@@ -75,9 +97,14 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a className="email-link" href="https://synplex.tech/" target="_blank" rel="noreferrer">
-      Check out my site!
-    </a>
+    <div className="cta-group">
+      <a className="primary-link" href="#projects">
+        See My Work →
+      </a>
+      <a className="secondary-link" href="#contact">
+        Get In Touch
+      </a>
+    </div>
   );
 
   const items = [one, two, three, four, five];

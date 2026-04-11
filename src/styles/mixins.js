@@ -23,6 +23,29 @@ const button = css`
   }
 `;
 
+const primaryButton = css`
+  color: var(--navy);
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    box-shadow: 4px 4px 0 0 var(--green);
+    transform: translate(-5px, -5px);
+  }
+  &:after {
+    display: none !important;
+  }
+`;
+
 const mixins = {
   flexCenter: css`
     display: flex;
@@ -85,6 +108,7 @@ const mixins = {
   `,
 
   button,
+  primaryButton,
 
   smallButton: css`
     color: var(--green);

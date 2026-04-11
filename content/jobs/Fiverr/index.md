@@ -7,8 +7,7 @@ range: 'August 2025 – Present'
 url: 'https://attraktmedia.com'
 ---
 
-- Provide ongoing web development services on a retainer basis.
 - Enhanced and maintained the client’s website, ensuring optimal performance and reliability.
 - Integrated third-party plugins and optimized assets for seamless functionality.
-- Gained experience with cloud hosting and deployment using Cloudflare.
-- Collaborate closely with the client to ensure project goals are met efficiently.
+- Optimized front-end assets and implemented lazy loading and script deferral strategies, reducing initial page load time.
+- Delivered ongoing UI enhancements and bug fixes, maintaining site stability and cross-browser compatibility.

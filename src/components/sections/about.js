@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Django'];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Next.js', 'Python', 'Django'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,18 +135,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hey, I’m Sohaib, a developer who got into coding back in 2020 after discovering how
+              Hey, I’m Sohaib, a developer who got into coding back in 2022 after discovering how
               much fun it was to mess around with websites using browser dev tools. Changing a
               heading's color or swapping out images felt like magic at the time, and that curiosity
               quickly turned into a real passion for building.
             </p>
 
             <p>
-              Since then, I’ve worked on a variety of projects across different roles. I interned at{' '}
-              <a href="https://prodigyinfotech.dev/">Prodigy InfoTech</a>, picked up freelance gigs
-              on <a href="https://fiverr.com/">Fiverr</a>, and now run my own studio called{' '}
-              <a href="https://synplex.dev">Synplex</a>, where I build digital products that are
-              both useful and easy to use.
+              Since then, I've worked on a variety of projects across different roles. I interned at{' '}
+              <a href="https://prodigyinfotech.dev/">Prodigy InfoTech</a>, took on freelance
+              projects, and now run my own studio called{' '}
+              <a href="https://synplex.studio">Synplex</a>
             </p>
 
             <p>
