@@ -1,5 +1,5 @@
 ---
-date: '2025-06-01'
+date: '2024-06-01'
 title: 'SceneCue'
 cover: './scenecue.png'
 github: 'https://github.com/SSKnT/scenecue-backend'

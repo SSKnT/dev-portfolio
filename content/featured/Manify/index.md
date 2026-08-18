@@ -1,5 +1,5 @@
 ---
-date: '2025-01-14'
+date: '2024-01-14'
 title: 'Manify'
 cover: './manify.jpg'
 github: 'https://github.com/SSKnT/manify-frontend'

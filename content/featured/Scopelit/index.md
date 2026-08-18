@@ -1,5 +1,5 @@
 ---
-date: '2026-08-18'
+date: '2023-08-18'
 title: 'Scopelit'
 cover: './scopelit.png'
 github: 'https://github.com/SSKnT/scopelit-frontend'
